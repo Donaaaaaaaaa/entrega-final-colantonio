@@ -19,10 +19,19 @@ from django.urls import path, include
 from django.http import HttpResponse
 
 def mi_func(xx):
-    return HttpResponse("<h1 style='color: red; font-size: 150px;'>Bienvenido a la Pagina principal!</h1>")
+    return HttpResponse("<a href='/app1/inicio/' style='color: red; font-size: 150px;'>click aqui para entrar en la app!</a>")
+
+def app1_view(request):
+    contexto_dict = {
+        'players': [
+         
+        ]
+    }
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mi_func),
     path("app1/", include ("app1.urls")),
+    path('list/', app1_view)
 ]

@@ -1,0 +1,42 @@
+{% extends 'app1/home.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="container">
+
+<p><h4>{{camisa.titulo}}</h4></p>
+{% if camisa.imagenPrenda %}
+    <p><img src="{{camisa.imagenPrenda.url}}" alt=""></p>
+{% endif %}
+<p>Marca: {{camisa.marca}}</p>
+<p>Modelo: {{camisa.modelo}}</p>
+<p>Descripción: {{camisa.descripcion}}</p>
+<p>Año: {{camisa.year}}</p>
+<p>Precio(US$): {{camisa.precio}}</p>
+<p>Teléfono de Contacto: {{camisa.telefonoContacto}}</p>
+<p>Email de Contacto: {{camisa.emailContacto}}</p>
+
+</div>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not camisa.comentarios.all %}
+        No hay comentarios para esta camisa.
+    {% else %}
+        {% for comentario in camisa.comentarios.all %}
+        <p><strong>{{comentario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' camisa.pk %}">Agregar un Comentario</a>
+    </div>
+</div>
+
+{% endblock %}

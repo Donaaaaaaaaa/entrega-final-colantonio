@@ -1,0 +1,42 @@
+{% extends 'app1/home.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="container">
+
+<p><h4>{{ buso.nombre }}</h4></p>
+{% if buso.imagen %}
+    <p><img src="{{ buso.imagen.url }}" alt=""></p>
+{% endif %}
+<p>Marca: {{ buso.marca }}</p>
+<p>Talla: {{ buso.talla }}</p>
+<p>Color: {{ buso.color }}</p>
+<p>Descripción: {{ buso.descripcion }}</p>
+<p>Precio: {{ buso.precio }}</p>
+<p>Teléfono de Contacto: {{ buso.telefono_contacto }}</p>
+<p>Email de Contacto: {{ buso.email_contacto }}</p>
+
+</div>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not buso.comentarios.all %}
+        No hay comentarios para este buso.
+    {% else %}
+        {% for comentario in buso.comentarios.all %}
+        <p><strong>{{ comentario.nombre }}</strong></p>
+        <p>{{ comentario.mensaje }}</p>
+        <p><small>{{ comentario.fecha_comentario }}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' buso.pk %}">Agregar un Comentario</a>
+    </div>
+</div>
+<br>
+{% endblock %}

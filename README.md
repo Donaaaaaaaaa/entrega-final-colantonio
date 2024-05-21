@@ -1,18 +1,35 @@
-﻿# entrega-final-colantonio
-# entrega-final-colantonio
-
-Mi Blog
-Este es un proyecto en desarrollo de un blog de viajes, diseñado para compartir experiencias, opiniones y conocimientos sobre lugares turisticos.
+Tienda de Ropa
+¡Bienvenido a nuestra Tienda de Ropa!
 
 Descripción
-Mi Blog es una plataforma en línea donde se publicarán artículos y contenido relacionado a viajes, lugares turisticos, donde comer, hospedarse y mucho mas. El objetivo principal es crear un espacio interactivo y enriquecedor para los turistas, donde puedan encontrar información útil.
+Esta es una aplicación web desarrollada en Django que permite a los usuarios explorar y comprar una variedad de prendas de vestir, incluyendo pantalones, camisas, remeras, camperas, busos, medias y zapatillas. Los usuarios pueden registrarse, iniciar sesión, ver detalles de los productos, editar su perfil, cambiar su contraseña, agregar nuevos productos y dejar comentarios en las páginas de los productos.
 
-Características
-Páginas Principales:
-Inicio: Presenta las últimas publicaciones y artículos destacados.
-Acerca de: Brinda información sobre el autor o autores del blog, así como su misión y visión.
-Contacto: Permite a los lectores comunicarse con el equipo detrás del blog, ya sea para realizar consultas, sugerencias o colaboraciones.
-Diseño Responsivo: El blog está diseñado para ser accesible y fácil de navegar desde cualquier dispositivo, ya sea una computadora de escritorio, una tableta o un teléfono móvil.
+Características Principales
+Registro de usuarios
+Inicio de sesión y cierre de sesión
+Exploración de productos por categoría
+Detalles de producto detallados
+Edición de perfil de usuario
+Cambio de contraseña
+Creación, edición y eliminación de productos
+Comentarios en las páginas de los productos
 
-Estado del Proyecto:
-Actualmente, el proyecto está en una fase inicial de desarrollo. (no me alcanzo el tiempo, perdon :( ... ) 
+Instalación
+Clona este repositorio en tu máquina local.
+Instala las dependencias usando pip install -r requirements.txt.
+Configura las variables de entorno en un archivo .env (ver .env.example para un ejemplo).
+Ejecuta las migraciones de la base de datos con python manage.py migrate.
+Inicia el servidor de desarrollo con python manage.py runserver.
+
+Uso
+Visita la página de inicio para explorar productos.
+Regístrate o inicia sesión para acceder a funcionalidades adicionales como edición de perfil y comentarios.
+Haz clic en un producto para ver más detalles.
+Desde la página de detalle del producto, puedes editar o eliminar el producto si tienes los permisos adecuados.
+Deja comentarios en la página de detalle del producto para compartir tus opiniones con otros usuarios.
+
+Contribución
+¡Las contribuciones son bienvenidas! Si tienes ideas de mejoras o encuentras errores, siéntete libre de abrir un issue o enviar un pull request.
+
+Autor
+Esta aplicación fue desarrollada por Donato Colantonio.
